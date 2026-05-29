@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://c1g4jx01cuvye"]
+
+[ext_resource type="Script" path="res://scripts/ui/lobby.gd" id="1"]
+
+[node name="Lobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 32.0
+offset_right = -40.0
+offset_bottom = -32.0
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "방 만들기"
+
+[node name="CreateBox" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="RoomName" type="LineEdit" parent="VBox/CreateBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "새 방 이름"
+
+[node name="CountOption" type="OptionButton" parent="VBox/CreateBox"]
+layout_mode = 2
+
+[node name="CreateBtn" type="Button" parent="VBox/CreateBox"]
+layout_mode = 2
+text = "만들기"
+
+[node name="GeneratedPw" type="Label" parent="VBox"]
+layout_mode = 2
+text = ""
+
+[node name="Sep" type="HSeparator" parent="VBox"]
+layout_mode = 2
+
+[node name="ExpandBtn" type="Button" parent="VBox"]
+layout_mode = 2
+toggle_mode = true
+text = "방 목록 펼치기  ▼"
+
+[node name="RoomCount" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Rooms: 0 / 6"
+
+[node name="ListBox" type="VBoxContainer" parent="VBox"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="RoomsList" type="ItemList" parent="VBox/ListBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JoinBtn" type="Button" parent="VBox/ListBox"]
+layout_mode = 2
+text = "선택한 방 참여"
+
+[node name="BottomBox" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="BackBtn" type="Button" parent="VBox/BottomBox"]
+layout_mode = 2
+text = "뒤로"
+
+[node name="StatusLabel" type="Label" parent="VBox/BottomBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = ""

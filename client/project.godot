@@ -1,0 +1,145 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="Gravity Shift"
+run/main_scene="res://scenes/login.tscn"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.png"
+
+[autoload]
+
+GameConstants="*res://scripts/core/game_constants.gd"
+NetClient="*res://scripts/networking/net_client.gd"
+Bootstrap="*res://scripts/bootstrap/bootstrap_state.gd"
+ConnStatus="*res://scripts/ui/conn_status.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/handheld/orientation=0
+
+[gui]
+
+theme/custom_font="res://assets/fonts/SCDream2.otf"
+
+[input]
+
+move_up={
+"deadzone": 0.5,
+"events": [{
+"device": 0,
+"echo": false,
+"key_label": 0,
+"keycode": 87,
+"physical_keycode": 0,
+"script": null,
+"type": "InputEventKey",
+"unicode": 0
+}, {
+"device": 0,
+"echo": false,
+"key_label": 0,
+"keycode": 4194320,
+"physical_keycode": 0,
+"script": null,
+"type": "InputEventKey",
+"unicode": 0
+}]
+}
+move_down={
+"deadzone": 0.5,
+"events": [{
+"device": 0,
+"echo": false,
+"key_label": 0,
+"keycode": 83,
+"physical_keycode": 0,
+"script": null,
+"type": "InputEventKey",
+"unicode": 0
+}, {
+"device": 0,
+"echo": false,
+"key_label": 0,
+"keycode": 4194322,
+"physical_keycode": 0,
+"script": null,
+"type": "InputEventKey",
+"unicode": 0
+}]
+}
+move_left={
+"deadzone": 0.5,
+"events": [{
+"device": 0,
+"echo": false,
+"key_label": 0,
+"keycode": 65,
+"physical_keycode": 0,
+"script": null,
+"type": "InputEventKey",
+"unicode": 0
+}, {
+"device": 0,
+"echo": false,
+"key_label": 0,
+"keycode": 4194319,
+"physical_keycode": 0,
+"script": null,
+"type": "InputEventKey",
+"unicode": 0
+}]
+}
+move_right={
+"deadzone": 0.5,
+"events": [{
+"device": 0,
+"echo": false,
+"key_label": 0,
+"keycode": 68,
+"physical_keycode": 0,
+"script": null,
+"type": "InputEventKey",
+"unicode": 0
+}, {
+"device": 0,
+"echo": false,
+"key_label": 0,
+"keycode": 4194321,
+"physical_keycode": 0,
+"script": null,
+"type": "InputEventKey",
+"unicode": 0
+}]
+}
+interact={
+"deadzone": 0.5,
+"events": [{
+"device": 0,
+"echo": false,
+"key_label": 0,
+"keycode": 81,
+"physical_keycode": 0,
+"script": null,
+"type": "InputEventKey",
+"unicode": 0
+}]
+}
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

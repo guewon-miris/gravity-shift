@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0gsstageselect01"]
+
+[ext_resource type="Script" path="res://scripts/ui/stage_select.gd" id="1"]
+
+[node name="StageSelect" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="Layout" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+
+[node name="StagesPanel" type="VBoxContainer" parent="Layout"]
+custom_minimum_size = Vector2(320, 0)
+
+[node name="StagesTitle" type="Label" parent="Layout/StagesPanel"]
+text = "Stages"
+
+[node name="StagesList" type="ItemList" parent="Layout/StagesPanel"]
+custom_minimum_size = Vector2(0, 360)
+size_flags_vertical = 3
+
+[node name="RoomsPanel" type="VBoxContainer" parent="Layout"]
+size_flags_horizontal = 3
+
+[node name="StageTitle" type="Label" parent="Layout/RoomsPanel"]
+text = "(Pick a stage)"
+
+[node name="StageInfo" type="Label" parent="Layout/RoomsPanel"]
+text = ""
+
+[node name="RoomCount" type="Label" parent="Layout/RoomsPanel"]
+text = "Rooms (total): 0 / 6"
+
+[node name="RoomsList" type="ItemList" parent="Layout/RoomsPanel"]
+custom_minimum_size = Vector2(0, 180)
+
+[node name="JoinBox" type="HBoxContainer" parent="Layout/RoomsPanel"]
+
+[node name="JoinPw" type="LineEdit" parent="Layout/RoomsPanel/JoinBox"]
+size_flags_horizontal = 3
+placeholder_text = "Password (15 chars)"
+secret = true
+
+[node name="JoinBtn" type="Button" parent="Layout/RoomsPanel/JoinBox"]
+text = "Join selected"
+
+[node name="Separator" type="HSeparator" parent="Layout/RoomsPanel"]
+
+[node name="CreateBox" type="HBoxContainer" parent="Layout/RoomsPanel"]
+
+[node name="RoomName" type="LineEdit" parent="Layout/RoomsPanel/CreateBox"]
+size_flags_horizontal = 3
+placeholder_text = "New room name"
+
+[node name="CreateBtn" type="Button" parent="Layout/RoomsPanel/CreateBox"]
+text = "Create"
+
+[node name="GeneratedPw" type="Label" parent="Layout/RoomsPanel"]
+text = ""
+
+[node name="StatusLabel" type="Label" parent="Layout/RoomsPanel"]
+text = ""

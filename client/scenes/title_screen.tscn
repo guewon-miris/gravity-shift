@@ -1,0 +1,241 @@
+[gd_scene format=3 uid="uid://c2hvsxqf44w2c"]
+
+[ext_resource type="Script" uid="uid://b5y6o6rn6j0k5" path="res://scripts/ui/title_screen.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://edxxdfmahyqp" path="res://assets/images/image1.png" id="2"]
+
+[sub_resource type="Theme" id="Theme_menu"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0, 0, 0, 0.5)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+
+[node name="TitleScreen" type="Control" unique_id=269094872]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1698796733]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VersionLabel" type="Label" parent="." unique_id=893733594]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 40.0
+offset_right = -40.0
+offset_bottom = 80.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 28
+text = "08"
+horizontal_alignment = 2
+
+[node name="LeftPanel" type="VBoxContainer" parent="." unique_id=1660167373]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 80.0
+offset_top = -89.0
+offset_right = 560.0
+offset_bottom = 290.0
+grow_vertical = 2
+theme = SubResource("Theme_menu")
+theme_override_constants/separation = 12
+
+[node name="Spacer" type="Control" parent="LeftPanel" unique_id=2123652871]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+
+[node name="NewGameBtn" type="Button" parent="LeftPanel" unique_id=195600234]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "     NEW GAME"
+flat = true
+alignment = 0
+
+[node name="ChallengeBtn" type="Button" parent="LeftPanel" unique_id=848615617]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "     CHALLENGE MODE"
+flat = true
+alignment = 0
+
+[node name="SettingsBtn" type="Button" parent="LeftPanel" unique_id=1192959254]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "     SETTINGS"
+flat = true
+alignment = 0
+
+[node name="CreditsBtn" type="Button" parent="LeftPanel" unique_id=1182206895]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "     CREDITS"
+flat = true
+alignment = 0
+
+[node name="QuitBtn" type="Button" parent="LeftPanel" unique_id=72782131]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "     QUIT"
+flat = true
+alignment = 0
+
+[node name="StatusLabel" type="Label" parent="." unique_id=920368550]
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -48.0
+offset_right = -40.0
+offset_bottom = -16.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 16
+
+[node name="RoomNameDialog" type="Panel" parent="." unique_id=1508081089]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -120.0
+offset_right = 280.0
+offset_bottom = 120.0
+
+[node name="VBox" type="VBoxContainer" parent="RoomNameDialog" unique_id=710193069]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 20.0
+offset_right = -24.0
+offset_bottom = -20.0
+theme_override_constants/separation = 14
+
+[node name="Prompt" type="Label" parent="RoomNameDialog/VBox" unique_id=2060562988]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Room name"
+
+[node name="NameInput" type="LineEdit" parent="RoomNameDialog/VBox" unique_id=2108783875]
+layout_mode = 2
+placeholder_text = "e.g. friday-coop"
+
+[node name="ErrorLabel" type="Label" parent="RoomNameDialog/VBox" unique_id=1270034410]
+modulate = Color(1, 0.5, 0.5, 1)
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="RoomNameDialog/VBox" unique_id=360129921]
+layout_mode = 2
+alignment = 2
+
+[node name="CancelBtn" type="Button" parent="RoomNameDialog/VBox/Buttons" unique_id=902583737]
+layout_mode = 2
+text = "Cancel"
+
+[node name="ConfirmBtn" type="Button" parent="RoomNameDialog/VBox/Buttons" unique_id=1619304524]
+layout_mode = 2
+text = "Create"
+
+[node name="SettingsDialog" type="Panel" parent="." unique_id=874120375]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -100.0
+offset_right = 280.0
+offset_bottom = 100.0
+
+[node name="VBox" type="VBoxContainer" parent="SettingsDialog" unique_id=1314418166]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 20.0
+offset_right = -24.0
+offset_bottom = -20.0
+theme_override_constants/separation = 14
+
+[node name="Prompt" type="Label" parent="SettingsDialog/VBox" unique_id=708839755]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Settings"
+
+[node name="NameLabel" type="Label" parent="SettingsDialog/VBox"]
+layout_mode = 2
+text = "이름"
+
+[node name="NameInput" type="LineEdit" parent="SettingsDialog/VBox"]
+layout_mode = 2
+placeholder_text = "이름 (1~16자)"
+max_length = 16
+
+[node name="ServerUrlLabel" type="Label" parent="SettingsDialog/VBox" unique_id=1996221205]
+layout_mode = 2
+text = "Server URL"
+
+[node name="ServerUrlInput" type="LineEdit" parent="SettingsDialog/VBox" unique_id=1360912321]
+layout_mode = 2
+placeholder_text = "ws://127.0.0.1:8765"
+
+[node name="Buttons" type="HBoxContainer" parent="SettingsDialog/VBox" unique_id=1611984012]
+layout_mode = 2
+alignment = 2
+
+[node name="CancelBtn" type="Button" parent="SettingsDialog/VBox/Buttons" unique_id=840538022]
+layout_mode = 2
+text = "Cancel"
+
+[node name="SaveBtn" type="Button" parent="SettingsDialog/VBox/Buttons" unique_id=1555527681]
+layout_mode = 2
+text = "Save"
+
+[node name="CreditsDialog" type="Panel" parent="." unique_id=320532035]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -100.0
+offset_right = 260.0
+offset_bottom = 100.0
+
+[node name="VBox" type="VBoxContainer" parent="CreditsDialog" unique_id=110208894]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 20.0
+offset_right = -24.0
+offset_bottom = -20.0
+
+[node name="Body" type="Label" parent="CreditsDialog/VBox" unique_id=1030927394]
+layout_mode = 2
+text = "Gravity Shift
+Made with Godot 4 + Python.
+
+(c) 2026"
+horizontal_alignment = 1
+
+[node name="CloseBtn" type="Button" parent="CreditsDialog/VBox" unique_id=1212987445]
+layout_mode = 2
+text = "Close"

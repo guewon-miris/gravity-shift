@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0gsgame00000001"]
+
+[ext_resource type="Script" path="res://scripts/bootstrap/game_bootstrap.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/camera/player_camera.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/block.tscn" id="4"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1")
+player_scene = ExtResource("3")
+block_scene = ExtResource("4")
+
+[node name="FloorRoot" type="Node2D" parent="."]
+
+[node name="HazardsRoot" type="Node2D" parent="."]
+
+[node name="DoorsRoot" type="Node2D" parent="."]
+
+[node name="ButtonsRoot" type="Node2D" parent="."]
+
+[node name="BlocksRoot" type="Node2D" parent="."]
+
+[node name="PlayersRoot" type="Node2D" parent="."]
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+script = ExtResource("2")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="StageLabel" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 36.0
+offset_right = 800.0
+offset_bottom = 64.0
+text = ""
+
+[node name="RoomLabel" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 800.0
+offset_bottom = 92.0
+text = ""
+
+[node name="LeaveBtn" type="Button" parent="HUD"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 12.0
+offset_right = -16.0
+offset_bottom = 48.0
+grow_horizontal = 0
+text = "나가기"
+
+[node name="ClearedPanel" type="Panel" parent="HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -80.0
+offset_right = 240.0
+offset_bottom = 80.0
+
+[node name="Label" type="Label" parent="HUD/ClearedPanel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+horizontal_alignment = 1
+vertical_alignment = 1
+text = ""
+
+[node name="ChatPanel" type="PanelContainer" parent="HUD"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -200.0
+offset_right = 372.0
+offset_bottom = -8.0
+grow_vertical = 0
+
+[node name="VBox" type="VBoxContainer" parent="HUD/ChatPanel"]
+theme_override_constants/separation = 4
+
+[node name="ChatLog" type="RichTextLabel" parent="HUD/ChatPanel/VBox"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+scroll_following = true
+
+[node name="ChatInput" type="LineEdit" parent="HUD/ChatPanel/VBox"]
+layout_mode = 2
+placeholder_text = "메시지 입력 (Enter)"
+
