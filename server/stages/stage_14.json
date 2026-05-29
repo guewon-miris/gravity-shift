@@ -1,0 +1,138 @@
+{
+  "id": 14,
+  "world": 4,
+  "label": "4-2",
+  "name": "종합 2",
+  "grid_w": 14,
+  "grid_h": 14,
+  "required_players": 2,
+  "spawns": [
+    {
+      "color": 0,
+      "cell": [
+        0,
+        0
+      ]
+    },
+    {
+      "color": 1,
+      "cell": [
+        0,
+        13
+      ]
+    },
+    {
+      "color": 2,
+      "cell": [
+        0,
+        1
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "color": 0,
+      "cell": [
+        13,
+        0
+      ]
+    },
+    {
+      "color": 1,
+      "cell": [
+        13,
+        13
+      ]
+    },
+    {
+      "color": 2,
+      "cell": [
+        13,
+        1
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "color": 0,
+      "cell": [
+        3,
+        2
+      ]
+    },
+    {
+      "color": 1,
+      "cell": [
+        10,
+        11
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "color": 0,
+      "cell": [
+        4,
+        0
+      ]
+    },
+    {
+      "color": 0,
+      "cell": [
+        9,
+        0
+      ]
+    },
+    {
+      "color": 1,
+      "cell": [
+        4,
+        13
+      ]
+    },
+    {
+      "color": 1,
+      "cell": [
+        9,
+        13
+      ]
+    }
+  ],
+  "hazards": [
+    {
+      "kind": "lava",
+      "cell": [
+        6,
+        6
+      ]
+    },
+    {
+      "kind": "lava",
+      "cell": [
+        6,
+        7
+      ]
+    },
+    {
+      "kind": "spike",
+      "cell": [
+        7,
+        6
+      ]
+    },
+    {
+      "kind": "hole",
+      "cell": [
+        8,
+        8
+      ]
+    },
+    {
+      "kind": "laser",
+      "cell": [
+        5,
+        5
+      ]
+    }
+  ]
+}

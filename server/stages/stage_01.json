@@ -1,0 +1,73 @@
+{
+  "id": 1,
+  "world": 1,
+  "label": "1-1",
+  "name": "첫걸음",
+  "grid_w": 8,
+  "grid_h": 8,
+  "required_players": 2,
+  "spawns": [
+    {
+      "color": 0,
+      "cell": [
+        0,
+        0
+      ]
+    },
+    {
+      "color": 1,
+      "cell": [
+        0,
+        7
+      ]
+    },
+    {
+      "color": 2,
+      "cell": [
+        0,
+        1
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "color": 0,
+      "cell": [
+        7,
+        0
+      ]
+    },
+    {
+      "color": 1,
+      "cell": [
+        7,
+        7
+      ]
+    },
+    {
+      "color": 2,
+      "cell": [
+        7,
+        1
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "color": 0,
+      "cell": [
+        3,
+        2
+      ]
+    },
+    {
+      "color": 1,
+      "cell": [
+        4,
+        5
+      ]
+    }
+  ],
+  "buttons": [],
+  "hazards": []
+}

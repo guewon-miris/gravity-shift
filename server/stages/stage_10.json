@@ -1,0 +1,123 @@
+{
+  "id": 10,
+  "world": 3,
+  "label": "3-2",
+  "name": "용암 지대",
+  "grid_w": 12,
+  "grid_h": 12,
+  "required_players": 2,
+  "spawns": [
+    {
+      "color": 0,
+      "cell": [
+        0,
+        0
+      ]
+    },
+    {
+      "color": 1,
+      "cell": [
+        0,
+        11
+      ]
+    },
+    {
+      "color": 2,
+      "cell": [
+        0,
+        1
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "color": 0,
+      "cell": [
+        11,
+        0
+      ]
+    },
+    {
+      "color": 1,
+      "cell": [
+        11,
+        11
+      ]
+    },
+    {
+      "color": 2,
+      "cell": [
+        11,
+        1
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "color": 0,
+      "cell": [
+        3,
+        2
+      ]
+    },
+    {
+      "color": 1,
+      "cell": [
+        8,
+        9
+      ]
+    }
+  ],
+  "buttons": [],
+  "hazards": [
+    {
+      "kind": "lava",
+      "cell": [
+        4,
+        4
+      ]
+    },
+    {
+      "kind": "lava",
+      "cell": [
+        5,
+        4
+      ]
+    },
+    {
+      "kind": "lava",
+      "cell": [
+        6,
+        4
+      ]
+    },
+    {
+      "kind": "spike",
+      "cell": [
+        4,
+        7
+      ]
+    },
+    {
+      "kind": "spike",
+      "cell": [
+        5,
+        7
+      ]
+    },
+    {
+      "kind": "hole",
+      "cell": [
+        8,
+        5
+      ]
+    },
+    {
+      "kind": "laser",
+      "cell": [
+        2,
+        9
+      ]
+    }
+  ]
+}
